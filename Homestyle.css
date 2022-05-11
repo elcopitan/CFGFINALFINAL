@@ -1,0 +1,153 @@
+/*Global styles for all pages*/
+body {
+  background-color: #000000;
+  color: #b7cece;
+  font-size: 1.3em;
+  font-family: ‘Pragati Narrow’, sans-serif;
+  letter-spacing: 0.2ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+nav,
+footer {
+  margin: none;
+  padding: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+h1 {
+  color: #bab700;
+  font-size: 2.5em;
+  font-family: ‘Anton’, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  padding: 0;
+  line-height: 2em;
+  margin: auto;
+}
+h2 {
+  color: #fb9e60;
+  font-size: 1.5em;
+  font-family: ‘Anton’, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  line-height: 1em;
+  margin: auto;
+}
+h3 {
+  color: #bab700;
+  font-size: 1.3em;
+  font-family: ‘Anton’, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25ch;
+}
+a {
+  color: #bab700;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+a:hover {
+  color: #fb9e60;
+  text-decoration: underline;
+}
+
+.responsive-fallback {
+    display: none;
+}
+
+/*HEADER AND FOOTER DIDN'T LOOK GREAT IN THE GREEN, SO JUST KEPT BLACK*/
+
+/* Map-specific styles*/
+
+.map {
+  margin: auto;
+}
+.map path {
+  fill: #79ba00;
+  stroke: #b7cece;
+  stroke-width: 1px;
+}
+.map path:hover {
+  fill: #fb9e60;
+  stroke: none;
+}
+
+/*Animal Page styles*/
+
+#animal-pg-heading {
+    color: #fb9e60;
+}
+
+.animal-page-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.img {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.animal-information {
+    flex-wrap: wrap;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.animal-information h3 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.animal-information p {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* RESPONSIVE STYLING */
+@media screen and (max-width: 750px) {
+    .map-container {
+        display: none;
+    }
+    .animal-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .img {
+        margin-right: 0;
+        max-width: 450px;
+    }
+    .animal-information {
+        margin: 5px;
+    }
+    .responsive-fallback {
+        display: block;
+    }
+    h1 {
+        line-height: 1em;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+}
